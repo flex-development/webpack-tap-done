@@ -6,7 +6,7 @@
     "async-callback",
     "callback-functions",
     "callbacks",
-    "tappable",
+    "tapable",
     "webpack",
     "webpack-compiler",
     "webpack-compiler-hooks",
