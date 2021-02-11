@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowUnreachableCode": false,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "checkJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es6"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "paths": {
+      "@fixtures/*": ["__tests__/fixtures/*"],
+      "@test-utils": ["__tests__/utils.ts"],
+      "@webpack-tap-done": ["src/index.ts"],
+      "@webpack-tap-done/*": ["src/*"]
+    },
+    "pretty": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": false,
+    "strictPropertyInitialization": false,
+    "strict": true,
+    "target": "es6"
+  },
+  "exclude": ["node_modules"]
+}

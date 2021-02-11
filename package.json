@@ -1,0 +1,84 @@
+{
+  "name": "@flex-development/webpack-tap-done",
+  "description": "Execute (a)synchronous callbacks after Webpack compilations.",
+  "version": "1.0.0",
+  "keywords": [
+    "async-callback",
+    "callback-functions",
+    "callbacks",
+    "tappable",
+    "webpack",
+    "webpack-compiler",
+    "webpack-compiler-hooks",
+    "webpack-hooks",
+    "webpack-plugin"
+  ],
+  "homepage": "https://github.com/flex-development/webpack-tap-done",
+  "repository": "git://github.com/flex-development/webpack-tap-done.git",
+  "bugs": {
+    "url": "https://github.com/flex-development/webpack-tap-done/issues",
+    "email": "developers@flexdevelopment.llc"
+  },
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Lexus Drumgold",
+    "email": "lex@flexdevlopment.llc",
+    "url": "https://flexdevelopment.llc"
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "./dist",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf node_modules || true; yarn",
+    "format": "prettier --write \"./\"",
+    "lint": "eslint . --ext js,ts,tsx --fix --cache",
+    "test": "jest --detectOpenHandles --passWithNoTests",
+    "precompile": "rm -rf ./dist || true",
+    "compile": "tsc -p tsconfig.prod.json",
+    "release": "zsh ./scripts/release.sh",
+    "prepublishOnly": "yarn compile",
+    "postpublish": "git ch next; git rebase origin/main; git pnv"
+  },
+  "dependencies": {
+    "debug": "latest"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "next",
+    "@commitlint/config-conventional": "next",
+    "@commitlint/format": "next",
+    "@types/debug": "latest",
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "@types/webpack": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-jest": "latest",
+    "eslint-plugin-node": "latest",
+    "eslint-plugin-prettier": "latest",
+    "execa": "latest",
+    "husky": "4.3.8",
+    "jest": "next",
+    "lint-staged": "latest",
+    "prettier": "latest",
+    "standard-version": "latest",
+    "ts-jest": "next",
+    "ts-node": "latest",
+    "typescript": "4.2.0-beta",
+    "underscore-cli": "latest",
+    "webpack": "latest",
+    "webpack-merge": "latest"
+  },
+  "peerDependencies": {
+    "webpack": "*"
+  },
+  "release": {
+    "allowBranch": "main"
+  }
+}
