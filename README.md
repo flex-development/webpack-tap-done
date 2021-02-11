@@ -25,6 +25,9 @@ be called with the `stats` object.
    //npm.pkg.github.com/:_authToken=${GH_PAT}
    ```
 
+   where `GH_PAT` is your [GitHub personal access token][2] with
+   [`read:packages`][3] scope permissions.
+
 2. Add development dependencies
 
    ```zsh
@@ -39,7 +42,7 @@ be called with the `stats` object.
 
 ## Usage
 
-The example below is from a [Next.js][3] project that implements an
+The example below is from a [Next.js][4] project that implements an
 `InlineStylesHead` component:
 
 ```javascript
@@ -187,10 +190,12 @@ export class InlineStylesHead extends Head {
 
 ## Built With
 
-- [Webpack Compiler Hooks][4]
+- [Webpack Compiler Hooks][5]
 
 [1]: https://webpack.js.org/concepts/
 [2]:
-  https://docs.github.com/en/packages/guides/configuring-npm-for-use-with-github-packages#installing-a-package
-[3]: https://nextjs.org/
-[4]: https://webpack.js.org/api/compiler-hooks/
+  https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
+[3]:
+  https://docs.github.com/en/developers/apps/scopes-for-oauth-apps#available-scopes
+[4]: https://nextjs.org/
+[5]: https://webpack.js.org/api/compiler-hooks/
